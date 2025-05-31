@@ -229,13 +229,9 @@ class _EventsScreenState extends State<EventsScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Event Cards
-              // Display upcoming or past based on _isSelected
               if (_isSelected[0]) // Upcoming is selected
-                ...upcomingEvents.map((event) => _buildEventCard(context, event)).toList(),
-              // if (_isSelected[1]) // Past is selected
-              //   ...pastEvents.map((event) => _buildEventCard(context, event)).toList(),
+                ...upcomingEvents.map((event) => _buildEventCard(context, event)),
+
 
             ],
           ),

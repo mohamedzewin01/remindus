@@ -22,7 +22,7 @@ class LocaleCubit extends Cubit<Locale> {
 
   void _loadSavedLanguage() {
     final savedLanguage =
-        CacheService.getData(key: CacheConstants.defaultLanguage) ?? 'ar';
+        CacheService.getData(key: CacheConstants.defaultLanguage) ?? 'en';
     emit(Locale(savedLanguage));
   }
 }
