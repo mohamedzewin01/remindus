@@ -5,6 +5,14 @@
 ⚠️ **Note:** This project is currently **under active development**, and features may change as the app evolves toward a stable release.
 
 ---
+## 🖼️ Overview
+
+Here’s a preview of the current UI design for the RemindUs mobile application. These mockups illustrate core screens login.
+
+| Register Screen Arabic | Login Screen Arabic | Login Screen English | Register Screen English |
+|--------------|----------------|----------------|------------|
+| ![IMG-20250531-WA0012](https://github.com/user-attachments/assets/2214a64a-0471-43d5-86fa-8ac1d798c2be) | ![IMG-20250531-WA0011](https://github.com/user-attachments/assets/7d3aa5bc-9474-45f7-accf-54d9f6364294) | ![IMG-20250531-WA0010](https://github.com/user-attachments/assets/a381ac73-680c-4d1d-84fc-87beeeaee312) | ![IMG-20250531-WA0013](https://github.com/user-attachments/assets/44c8c903-7c40-431c-8b24-a50a9b80be85) |
+
 
 ## 🚀 App Concept
 
