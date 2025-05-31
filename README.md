@@ -26,5 +26,7 @@ RemindUs helps users to:
 - ✅ Notification system for upcoming reminders
 - ✅ User profile with settings and invitation management
 - ✅ Full support for both light and dark modes
+- ✅ Light and Dark Mode support
+- ✅ Multi-language support (Localization) — supports both English & Arabic
 
 ---
