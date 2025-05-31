@@ -1,16 +1,30 @@
-# remindus
+# 📱 RemindUs – Event Management & Shared Reminder App (Flutter)
 
-A new Flutter project.
+**RemindUs** is a modern mobile app that simplifies event organization, shared reminders, and collaborative note-taking among users. It is being developed using the **Flutter** framework to deliver high performance and a smooth user experience on both Android and iOS.
 
-## Getting Started
+⚠️ **Note:** This project is currently **under active development**, and features may change as the app evolves toward a stable release.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 App Concept
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+RemindUs helps users to:
+- Create events with title, date, time, and description
+- Invite participants via email or username
+- Share and edit collaborative notes
+- Receive automatic reminders and notifications
+- Integrate events with the user's device calendar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧩 Key Features
+
+- ✅ Login/Signup (with Google authentication support)
+- ✅ Dashboard showing upcoming events
+- ✅ Create and edit events with participant invitations
+- ✅ Event detail page with participants and shared notes
+- ✅ Notification system for upcoming reminders
+- ✅ User profile with settings and invitation management
+- ✅ Full support for both light and dark modes
+
+---
