@@ -30,5 +30,6 @@
   "termsOfServiceClicked": "Terms of Service clicked",
   "and": "and",
   "privacyPolicy": "Privacy Policy",
-  "privacyPolicyClicked": "Privacy Policy clicked"
+  "privacyPolicyClicked": "Privacy Policy clicked",
+  "loading": "loading"
 }

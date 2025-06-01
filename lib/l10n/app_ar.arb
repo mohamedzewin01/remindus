@@ -30,5 +30,6 @@
   "termsOfServiceClicked": "تم النقر على شروط الخدمة",
   "and": "و",
   "privacyPolicy": "سياسة الخصوصية",
-  "privacyPolicyClicked": "تم النقر على سياسة الخصوصية"
+  "privacyPolicyClicked": "تم النقر على سياسة الخصوصية",
+  "loading": "جاري التحميل"
 }

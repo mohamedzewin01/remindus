@@ -56,6 +56,7 @@ dependencies:
   google_sign_in: ^6.3.0
   firebase_auth: ^5.5.4
   another_flushbar: ^1.12.30
+  animated_bottom_navigation_bar: ^1.4.0
 
 
 

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:another_flushbar/flushbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -25,6 +27,11 @@ class AuthFunctions {
       final UserCredential userCredential = await FirebaseAuth.instance
           .signInWithCredential(credential);
       if (userCredential.user != null) {
+       log(userCredential.user!.photoURL.toString());
+       log(userCredential.user!.phoneNumber.toString());
+       log(userCredential.user!.photoURL.toString());
+       log(userCredential.user!.providerData.toString());
+
         if (context.mounted) {
           Navigator.pushReplacementNamed(context, RoutesManager.layoutScreen);
         }
@@ -52,16 +59,30 @@ class AuthFunctions {
     String password,
   ) async {
     try {
-      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailAddress.trim(),
         password: password.trim(),
       );
 
-      if (credential.user != null && context.mounted) {
+      if (userCredential.user != null && context.mounted) {
+
         Navigator.pushReplacementNamed(context, RoutesManager.layoutScreen);
       }
-
-      print('User signed in: ${credential.user?.email}');
+      log(userCredential.user!.photoURL.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.uid.toString());
+      log(userCredential.user!.phoneNumber.toString());
+      log(userCredential.user!.photoURL.toString());
+      log(userCredential.user!.providerData.toString());
+      print('User signed in: ${userCredential.user?.uid}');
     } on FirebaseAuthException catch (e) {
       print('FirebaseAuthException: ${e.code} | ${e.message}');
 

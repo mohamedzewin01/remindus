@@ -17,11 +17,10 @@ class _LayoutScreenState extends State<LayoutScreen> {
   @override
   Widget build(BuildContext context) {
 
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => LayoutCubit()),
+    return BlocProvider.value(
+      value: LayoutCubit(),
 
-      ],
+
 
       child: AdaptiveLayout(
         mobileLayout: (context) => const LayoutMobileView(),

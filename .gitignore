@@ -22,6 +22,7 @@ assets/.env
 android/app/google-services.json
 
 lib/core/api/api_manager/api_manager.g.dart
+lib/core/api/api_constants.dart
 lib/firebase_options.dart
 
 # The .vscode folder contains launch configuration and tasks you configure in

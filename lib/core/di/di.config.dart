@@ -113,26 +113,41 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final dioModule = _$DioModule();
     gh.lazySingleton<_i361.Dio>(() => dioModule.providerDio());
-    gh.factory<_i647.AuthRepository>(() => _i295.AuthRepositoryImpl());
+    gh.factory<_i558.EventsDatasourceRepo>(
+      () => _i650.EventsDatasourceRepoImpl(),
+    );
     gh.factory<_i461.ProfileRepository>(() => _i810.ProfileRepositoryImpl());
+    gh.factory<_i827.HomeDatasourceRepo>(() => _i97.HomeDatasourceRepoImpl());
     gh.factory<_i59.AddEventRepository>(() => _i558.AddEventRepositoryImpl());
     gh.factory<_i369.ProfileUseCaseRepo>(
       () => _i589.ProfileUseCase(gh<_i461.ProfileRepository>()),
     );
+    gh.factory<_i1046.ProfileDatasourceRepo>(
+      () => _i1017.ProfileDatasourceRepoImpl(),
+    );
+    gh.factory<_i1008.NotificationsDatasourceRepo>(
+      () => _i474.NotificationsDatasourceRepoImpl(),
+    );
     gh.factory<_i126.HomeRepository>(() => _i60.HomeRepositoryImpl());
     gh.factory<_i614.EventsRepository>(() => _i89.EventsRepositoryImpl());
+    gh.factory<_i865.EventDetailsDatasourceRepo>(
+      () => _i504.EventDetailsDatasourceRepoImpl(),
+    );
     gh.factory<_i680.ApiService>(() => _i680.ApiService(gh<_i361.Dio>()));
-    gh.factory<_i1046.ProfileDatasourceRepo>(
-      () => _i1017.ProfileDatasourceRepoImpl(gh<_i680.ApiService>()),
+    gh.factory<_i809.AddEventDatasourceRepo>(
+      () => _i347.AddEventDatasourceRepoImpl(),
+    );
+    gh.factory<_i938.NotificationsRepository>(
+      () => _i954.NotificationsRepositoryImpl(
+        gh<_i1008.NotificationsDatasourceRepo>(),
+      ),
     );
     gh.factory<_i658.EventDetailsRepository>(
       () => _i880.EventDetailsRepositoryImpl(),
     );
-    gh.factory<_i558.EventsDatasourceRepo>(
-      () => _i650.EventsDatasourceRepoImpl(gh<_i680.ApiService>()),
-    );
-    gh.factory<_i827.HomeDatasourceRepo>(
-      () => _i97.HomeDatasourceRepoImpl(gh<_i680.ApiService>()),
+    gh.factory<_i354.AuthDatasourceRepo>(() => _i485.AuthDatasourceRepoImpl());
+    gh.factory<_i647.AuthRepository>(
+      () => _i295.AuthRepositoryImpl(gh<_i354.AuthDatasourceRepo>()),
     );
     gh.factory<_i628.AuthUseCaseRepo>(
       () => _i971.AuthUseCase(gh<_i647.AuthRepository>()),
@@ -146,34 +161,20 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i847.AddEventUseCaseRepo>(
       () => _i153.AddEventUseCase(gh<_i59.AddEventRepository>()),
     );
-    gh.factory<_i354.AuthDatasourceRepo>(
-      () => _i485.AuthDatasourceRepoImpl(gh<_i680.ApiService>()),
-    );
     gh.factory<_i54.EventDetailsUseCaseRepo>(
       () => _i1033.EventDetailsUseCase(gh<_i658.EventDetailsRepository>()),
     );
     gh.factory<_i543.HomeUseCaseRepo>(
       () => _i557.HomeUseCase(gh<_i126.HomeRepository>()),
     );
-    gh.factory<_i1008.NotificationsDatasourceRepo>(
-      () => _i474.NotificationsDatasourceRepoImpl(gh<_i680.ApiService>()),
-    );
-    gh.factory<_i865.EventDetailsDatasourceRepo>(
-      () => _i504.EventDetailsDatasourceRepoImpl(gh<_i680.ApiService>()),
-    );
-    gh.factory<_i809.AddEventDatasourceRepo>(
-      () => _i347.AddEventDatasourceRepoImpl(gh<_i680.ApiService>()),
-    );
     gh.factory<_i373.EventsCubit>(
       () => _i373.EventsCubit(gh<_i234.EventsUseCaseRepo>()),
     );
+    gh.factory<_i767.NotificationsUseCaseRepo>(
+      () => _i53.NotificationsUseCase(gh<_i938.NotificationsRepository>()),
+    );
     gh.factory<_i192.AuthCubit>(
       () => _i192.AuthCubit(gh<_i628.AuthUseCaseRepo>()),
-    );
-    gh.factory<_i938.NotificationsRepository>(
-      () => _i954.NotificationsRepositoryImpl(
-        gh<_i1008.NotificationsDatasourceRepo>(),
-      ),
     );
     gh.factory<_i201.AddEventCubit>(
       () => _i201.AddEventCubit(gh<_i847.AddEventUseCaseRepo>()),
@@ -183,9 +184,6 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i783.EventDetailsCubit>(
       () => _i783.EventDetailsCubit(gh<_i54.EventDetailsUseCaseRepo>()),
-    );
-    gh.factory<_i767.NotificationsUseCaseRepo>(
-      () => _i53.NotificationsUseCase(gh<_i938.NotificationsRepository>()),
     );
     gh.factory<_i11.NotificationsCubit>(
       () => _i11.NotificationsCubit(gh<_i767.NotificationsUseCaseRepo>()),

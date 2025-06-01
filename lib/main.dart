@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:remindus/core/resources/routes_manager.dart';
+import 'core/api/remote/firebase_config.dart';
 import 'core/utils/myTheme.dart';
 import 'firebase_options.dart';
 import 'l10n/app_localizations.dart';
@@ -16,17 +17,11 @@ import 'localization/locale_cubit.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await FirebaseConfig.initializeFirebase();
   await dotenv.load(fileName:"assets/.env");
-
   await CacheService.cacheInitialization();
-
   configureDependencies();
-
   Bloc.observer = MyBlocObserver();
-
   runApp(MyApp());
 
   // runApp(DevicePreview(

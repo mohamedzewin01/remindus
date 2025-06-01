@@ -100,4 +100,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyPolicyClicked => 'Privacy Policy clicked';
+
+  @override
+  String get loading => 'loading';
 }

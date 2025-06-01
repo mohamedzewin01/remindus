@@ -283,6 +283,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Privacy Policy clicked'**
   String get privacyPolicyClicked;
+
+  /// No description provided for @loading.
+  ///
+  /// In en, this message translates to:
+  /// **'loading'**
+  String get loading;
 }
 
 class _AppLocalizationsDelegate

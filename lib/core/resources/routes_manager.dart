@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:remindus/features/AddEvent/presentation/pages/AddEvent_page.dart';
 import 'package:remindus/features/Auth/presentation/pages/Auth_page.dart';
 import 'package:remindus/features/Home/presentation/pages/Home_page.dart';
 import 'package:remindus/features/layout/presentation/pages/layout_view.dart';
@@ -10,8 +11,8 @@ class RoutesManager {
   static const String splashScreen = '/';
   static const String layoutScreen = '/LayoutScreen';
   static const String authPage = '/AuthPage';
-
   static const String homeScreen = '/home';
+  static const String addEventPage = '/AddEventPage';
 
 
 }
@@ -27,6 +28,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AuthPage());
       case RoutesManager.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomePage());
+        case RoutesManager.addEventPage:
+        return MaterialPageRoute(builder: (_) => const AddEventPage());
 
 
 

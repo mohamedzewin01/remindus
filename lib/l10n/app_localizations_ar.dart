@@ -100,4 +100,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get privacyPolicyClicked => 'تم النقر على سياسة الخصوصية';
+
+  @override
+  String get loading => 'جاري التحميل';
 }
