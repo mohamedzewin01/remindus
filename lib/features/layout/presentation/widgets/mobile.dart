@@ -33,7 +33,6 @@ elevation: 0,
             height: 55,
             activeIndex: cubit.index,
             gapLocation: GapLocation.center,
-
             backgroundColor: Colors.white,
             activeColor: ColorManager.accent,
             inactiveColor: Colors.grey,

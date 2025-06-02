@@ -284,6 +284,36 @@ abstract class AppLocalizations {
   /// **'Privacy Policy clicked'**
   String get privacyPolicyClicked;
 
+  /// No description provided for @work.
+  ///
+  /// In en, this message translates to:
+  /// **'Work'**
+  String get work;
+
+  /// No description provided for @personal.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal'**
+  String get personal;
+
+  /// No description provided for @meeting.
+  ///
+  /// In en, this message translates to:
+  /// **'Meeting'**
+  String get meeting;
+
+  /// No description provided for @appointment.
+  ///
+  /// In en, this message translates to:
+  /// **'Appointment'**
+  String get appointment;
+
+  /// No description provided for @other.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get other;
+
   /// No description provided for @loading.
   ///
   /// In en, this message translates to:

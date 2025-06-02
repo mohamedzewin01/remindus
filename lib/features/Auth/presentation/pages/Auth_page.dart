@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:remindus/assets_manager.dart';
 import 'package:remindus/core/functions/auth_function.dart';
 import 'package:remindus/core/resources/routes_manager.dart';
+import 'package:remindus/core/widgets/custom_text_form.dart';
 import 'package:remindus/l10n/app_localizations.dart';
 
 import '../../../../core/di/di.dart';
@@ -229,9 +230,6 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: _singUp,
-
-
-
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFF2A2A2A),
                         // Dark button
@@ -290,15 +288,7 @@ class _LoginPageState extends State<LoginPage> {
                             Assets.facebookSvg, // Replace with your asset path
                             AppLocalizations.of(context)!.facebook,
                             () {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                    AppLocalizations.of(
-                                      context,
-                                    )!.facebookLoginClicked,
-                                  ),
-                                ),
-                              );
+                            widget.viewModel.signInWithGithub();
                             },
                             isGithub: true,
                           ),
@@ -454,51 +444,4 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-class CustomTextForm extends StatelessWidget {
-  const CustomTextForm({
-    super.key,
-    required this.usernameController,
-    required this.hintText,
-    this.textInputType,
-    this.validator,
-    required this.title,
-  });
 
-  final TextEditingController usernameController;
-
-  final String hintText;
-  final String title;
-
-  final TextInputType? textInputType;
-
-  final String? Function(String?)? validator;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.black54,
-            fontSize: 14,
-          ),
-        ),
-        SizedBox(height: 8),
-        TextFormField(
-          controller: usernameController,
-          decoration: InputDecoration(
-            hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey[400]),
-          ),
-          keyboardType: textInputType,
-          validator: validator,
-        ),
-        SizedBox(height: 12),
-      ],
-    );
-  }
-}

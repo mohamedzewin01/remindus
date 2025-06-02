@@ -31,5 +31,10 @@
   "and": "and",
   "privacyPolicy": "Privacy Policy",
   "privacyPolicyClicked": "Privacy Policy clicked",
+  "work": "Work",
+  "personal": "Personal",
+  "meeting": "Meeting",
+  "appointment": "Appointment",
+  "other": "Other",
   "loading": "loading"
 }

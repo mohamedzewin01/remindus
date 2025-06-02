@@ -12,4 +12,5 @@ abstract class AuthUseCaseRepo {
   );
 
   Future<Result<UserSignInEntity?>> signInWithGoogle();
+  Future<Result<UserSignInEntity?>> signInWithGithub();
 }

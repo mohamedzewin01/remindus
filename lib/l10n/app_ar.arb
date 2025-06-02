@@ -31,5 +31,10 @@
   "and": "و",
   "privacyPolicy": "سياسة الخصوصية",
   "privacyPolicyClicked": "تم النقر على سياسة الخصوصية",
+  "work": "عمل",
+  "personal": "شخصي",
+  "meeting": "اجتماع",
+  "appointment": "موعد",
+  "other": "أخرى",
   "loading": "جاري التحميل"
 }

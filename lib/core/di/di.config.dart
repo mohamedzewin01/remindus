@@ -25,6 +25,8 @@ import '../../features/AddEvent/domain/useCases/AddEvent_useCase_repo.dart'
     as _i847;
 import '../../features/AddEvent/domain/useCases/AddEvent_useCase_repo_impl.dart'
     as _i153;
+import '../../features/AddEvent/presentation/bloc/add_partcipant_cubit/add_participant_cubit.dart'
+    as _i244;
 import '../../features/AddEvent/presentation/bloc/AddEvent_cubit.dart' as _i201;
 import '../../features/Auth/data/datasources/Auth_datasource_repo.dart'
     as _i354;
@@ -118,7 +120,6 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i461.ProfileRepository>(() => _i810.ProfileRepositoryImpl());
     gh.factory<_i827.HomeDatasourceRepo>(() => _i97.HomeDatasourceRepoImpl());
-    gh.factory<_i59.AddEventRepository>(() => _i558.AddEventRepositoryImpl());
     gh.factory<_i369.ProfileUseCaseRepo>(
       () => _i589.ProfileUseCase(gh<_i461.ProfileRepository>()),
     );
@@ -158,9 +159,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i234.EventsUseCaseRepo>(
       () => _i119.EventsUseCase(gh<_i614.EventsRepository>()),
     );
-    gh.factory<_i847.AddEventUseCaseRepo>(
-      () => _i153.AddEventUseCase(gh<_i59.AddEventRepository>()),
-    );
     gh.factory<_i54.EventDetailsUseCaseRepo>(
       () => _i1033.EventDetailsUseCase(gh<_i658.EventDetailsRepository>()),
     );
@@ -170,23 +168,32 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i373.EventsCubit>(
       () => _i373.EventsCubit(gh<_i234.EventsUseCaseRepo>()),
     );
+    gh.factory<_i59.AddEventRepository>(
+      () => _i558.AddEventRepositoryImpl(gh<_i809.AddEventDatasourceRepo>()),
+    );
     gh.factory<_i767.NotificationsUseCaseRepo>(
       () => _i53.NotificationsUseCase(gh<_i938.NotificationsRepository>()),
     );
     gh.factory<_i192.AuthCubit>(
       () => _i192.AuthCubit(gh<_i628.AuthUseCaseRepo>()),
     );
-    gh.factory<_i201.AddEventCubit>(
-      () => _i201.AddEventCubit(gh<_i847.AddEventUseCaseRepo>()),
-    );
     gh.factory<_i371.HomeCubit>(
       () => _i371.HomeCubit(gh<_i543.HomeUseCaseRepo>()),
+    );
+    gh.factory<_i847.AddEventUseCaseRepo>(
+      () => _i153.AddEventUseCase(gh<_i59.AddEventRepository>()),
     );
     gh.factory<_i783.EventDetailsCubit>(
       () => _i783.EventDetailsCubit(gh<_i54.EventDetailsUseCaseRepo>()),
     );
     gh.factory<_i11.NotificationsCubit>(
       () => _i11.NotificationsCubit(gh<_i767.NotificationsUseCaseRepo>()),
+    );
+    gh.factory<_i244.AddParticipantCubit>(
+      () => _i244.AddParticipantCubit(gh<_i847.AddEventUseCaseRepo>()),
+    );
+    gh.factory<_i201.AddEventCubit>(
+      () => _i201.AddEventCubit(gh<_i847.AddEventUseCaseRepo>()),
     );
     return this;
   }

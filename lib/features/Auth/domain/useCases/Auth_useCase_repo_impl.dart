@@ -26,4 +26,9 @@ class AuthUseCase implements AuthUseCaseRepo {
     return repository.signInWithGoogle();
   }
 
+  @override
+  Future<Result<UserSignInEntity?>> signInWithGithub() {
+   return repository.signInWithGithub();
+  }
+
 }

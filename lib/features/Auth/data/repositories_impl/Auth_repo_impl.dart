@@ -24,4 +24,9 @@ class AuthRepositoryImpl implements AuthRepository {
    return _authDatasourceRepo.signInWithGoogle();
   }
 
+  @override
+  Future<Result<UserSignInEntity?>> signInWithGithub() {
+   return _authDatasourceRepo.signInWithGithub();
+  }
+
 }

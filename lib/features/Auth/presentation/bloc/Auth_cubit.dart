@@ -73,5 +73,25 @@ class AuthCubit extends Cubit<AuthState> {
         break;
     }
   }
+  Future<void> signInWithGithub() async{
+    emit(AuthLoginLoading());
+    final result = await _authUseCaseRepo.signInWithGithub();
+    switch (result) {
+      case Success<UserSignInEntity?>():
+        {
+          if (!isClosed) {
+            emit(AuthLoginSuccess(result.data!));
+          }
+        }
+        break;
+      case Fail<UserSignInEntity?>():
+        {
+          if (!isClosed) {
+            emit(AuthLoginFailure(result.exception));
+          }
+        }
+        break;
+    }
+  }
 
 }

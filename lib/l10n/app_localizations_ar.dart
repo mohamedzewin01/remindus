@@ -102,5 +102,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get privacyPolicyClicked => 'تم النقر على سياسة الخصوصية';
 
   @override
+  String get work => 'عمل';
+
+  @override
+  String get personal => 'شخصي';
+
+  @override
+  String get meeting => 'اجتماع';
+
+  @override
+  String get appointment => 'موعد';
+
+  @override
+  String get other => 'أخرى';
+
+  @override
   String get loading => 'جاري التحميل';
 }

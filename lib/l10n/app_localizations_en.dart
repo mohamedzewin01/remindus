@@ -102,5 +102,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get privacyPolicyClicked => 'Privacy Policy clicked';
 
   @override
+  String get work => 'Work';
+
+  @override
+  String get personal => 'Personal';
+
+  @override
+  String get meeting => 'Meeting';
+
+  @override
+  String get appointment => 'Appointment';
+
+  @override
+  String get other => 'Other';
+
+  @override
   String get loading => 'loading';
 }

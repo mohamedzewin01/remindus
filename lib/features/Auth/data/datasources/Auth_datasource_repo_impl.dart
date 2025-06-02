@@ -121,6 +121,41 @@ class AuthDatasourceRepoImpl implements AuthDatasourceRepo {
     });
 
   }
+
+  @override
+  Future<Result<UserSignInEntity?>> signInWithGithub() {
+    return executeApi(() async {
+      final githubProvider = GithubAuthProvider();
+
+      // تسجيل الدخول باستخدام GitHub
+      final userCredential = await _firebaseAuth.signInWithProvider(githubProvider);
+      final userEntity = userCredential.toUserEntity();
+
+      final userDoc = FirebaseFirestore.instance.collection('users').doc(userCredential.user?.uid);
+      final docSnapshot = await userDoc.get();
+
+      if (!docSnapshot.exists) {
+        // لو المستخدم جديد، أضف بياناته
+        await userDoc.set({
+          "id": userCredential.user?.uid,
+          'email': userEntity.email,
+          'name': userEntity.name,
+          'image': userEntity.image,
+          'createdAt': FieldValue.serverTimestamp(),
+          // أي بيانات إضافية
+        });
+      } else {
+        // لو موجود ممكن تحدث بيانات معينة لو حبيت
+        await userDoc.update({
+          'lastLogin': FieldValue.serverTimestamp(),
+          'image': userEntity.image,
+        });
+      }
+
+      return userEntity;
+    });
+
+  }
 }
 
 

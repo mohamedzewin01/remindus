@@ -7,4 +7,5 @@ abstract class AuthDatasourceRepo {
   Future<Result<UserSignInEntity?>> signIn(String email, String password);
   Future<Result<UserSignInEntity?>> signUp(String userName,String email, String password);
   Future<Result<UserSignInEntity?>> signInWithGoogle();
+  Future<Result<UserSignInEntity?>> signInWithGithub();
 }
